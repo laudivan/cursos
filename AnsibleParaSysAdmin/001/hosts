@@ -1,0 +1,15 @@
+all:
+  hosts:
+  children:
+    linux:
+      hosts:
+        Target.Ubuntu:
+          ansible_port: 22
+          ansible_host: 192.168.0.221
+        Target.Fedora:
+          ansible_port: 22
+          ansible_host: 192.168.0.222
+    windows:
+      hosts:
+        Target.Windows:
+          ansible_host: 192.168.0.223
